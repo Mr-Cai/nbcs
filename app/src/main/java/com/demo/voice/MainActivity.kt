@@ -1,18 +1,17 @@
 package com.demo.voice
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
 import android.os.PowerManager
 import android.util.Log
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
     /* constants */
     //MediaPlayer mp;
     internal var ran: Int = 0
@@ -35,8 +34,7 @@ class MainActivity : Activity() {
     private val mHandler = Handler()
 
     /* References to view elements */
-    private val mStatusView: TextView? = null
-    private var mDisplay: SoundLevelView? = null
+    private var mDisplay: VoiceLevelView? = null
 
     /* sound data source */
     private var mSensor: SoundMeter? = null
@@ -88,12 +86,7 @@ class MainActivity : Activity() {
     }
 
 
-    /**
-     * Called when the activity is first created.
-     */
-    @SuppressLint("InvalidWakeLockTag")
-    public override fun onCreate(savedInstanceState: Bundle?) {
-
+    override fun onCreate(savedInstanceState: Bundle?) {
         mp[0] = MediaPlayer.create(this, R.raw.darkkevin)
         mp[1] = MediaPlayer.create(this, R.raw.kevin1)
         mp[2] = MediaPlayer.create(this, R.raw.mrchow)
@@ -101,21 +94,15 @@ class MainActivity : Activity() {
         mp[4] = MediaPlayer.create(this, R.raw.noah2)
         mp[5] = MediaPlayer.create(this, R.raw.noah3)
         mp[6] = MediaPlayer.create(this, R.raw.noah4)
-
-
         super.onCreate(savedInstanceState)
-
-        // Defined SoundLevelView in main.xml file
         setContentView(R.layout.main)
-
+        supportActionBar!!.hide()
         // Used to record voice
         mSensor = SoundMeter()
         mDisplay = findViewById(R.id.volume)
-
         val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
         mWakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "MainActivity")
     }
-
 
     public override fun onResume() {
         super.onResume()

@@ -6,22 +6,20 @@ import android.media.MediaRecorder
 import java.io.IOException
 
 class SoundMeter {
-
     private var mRecorder: MediaRecorder? = null
     private var mEMA = 0.0
-
     val amplitude: Double
         get() = if (mRecorder != null)
             mRecorder!!.maxAmplitude / 2700.0
         else
             0.0
 
-    val amplitudeEMA: Double
-        get() {
-            val amp = amplitude
-            mEMA = EMA_FILTER * amp + (1.0 - EMA_FILTER) * mEMA
-            return mEMA
-        }
+    /* val amplitudeEMA: Double
+         get() {
+             val amp = amplitude
+             mEMA = EMA_FILTER * amp + (1.0 - EMA_FILTER) * mEMA
+             return mEMA
+         }*/
 
     fun start() {
 
@@ -36,13 +34,10 @@ class SoundMeter {
             try {
                 mRecorder!!.prepare()
             } catch (e: IllegalStateException) {
-                // TODO Auto-generated catch block
                 e.printStackTrace()
             } catch (e: IOException) {
-                // TODO Auto-generated catch block
                 e.printStackTrace()
             }
-
             mRecorder!!.start()
             mEMA = 0.0
         }

@@ -18,7 +18,7 @@
 12-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:8:22-65
 13
 14    <application
-14-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:10:5-25:19
+14-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:10:5-26:19
 15        android:allowBackup="false"
 15-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:11:9-36
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -30,27 +30,29 @@
 19-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:13:9-43
 20        android:label="@string/app_name"
 20-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:14:9-41
-21        android:testOnly="true" >
-22        <activity
-22-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:15:9-24:20
-23            android:name="com.demo.voice.MainActivity"
-23-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:16:13-55
-24            android:label="@string/app_name" >
-24-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:17:13-45
-25            <intent-filter>
-25-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:18:13-23:29
-26                <action android:name="android.intent.action.MAIN" />
-26-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:19:17-69
-26-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:19:25-66
-27                <action android:name="android.intent.action.VIEW" />
+21        android:testOnly="true"
+22        android:theme="@style/AppTheme" >
+22-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:15:9-40
+23        <activity
+23-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:16:9-25:20
+24            android:name="com.demo.voice.MainActivity"
+24-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:17:13-55
+25            android:label="@string/app_name" >
+25-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:18:13-45
+26            <intent-filter>
+26-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:19:13-24:29
+27                <action android:name="android.intent.action.MAIN" />
 27-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:20:17-69
 27-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:20:25-66
-28
-29                <category android:name="android.intent.category.LAUNCHER" />
-29-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:22:17-77
-29-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:22:27-74
-30            </intent-filter>
-31        </activity>
-32    </application>
-33
-34</manifest>
+28                <action android:name="android.intent.action.VIEW" />
+28-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:21:17-69
+28-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:21:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:23:17-77
+30-->C:\Users\M\Desktop\nbcs\app\src\main\AndroidManifest.xml:23:27-74
+31            </intent-filter>
+32        </activity>
+33    </application>
+34
+35</manifest>

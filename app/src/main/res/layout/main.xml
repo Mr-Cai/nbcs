@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.demo.voice.SoundLevelView
+    <com.demo.voice.VoiceLevelView
         android:id="@+id/volume"
         android:layout_width="230sp"
         android:layout_height="60sp"
